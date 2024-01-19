@@ -1,93 +1,49 @@
-/* Reset some default styles */
 body,
-h1,
-h2,
-h3,
-p,
-img,
-a,
-button {
+html {
   margin: 0;
   padding: 0;
-  border: 0;
 }
-
-/* Set a background color and font family for the entire page */
 body {
-  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: "Teko", sans-serif;
 }
-
-/* Style the homepage section */
 .homepage {
   text-align: center;
-  padding: 50px;
+  padding: 20px;
+  font-size: 20px;
 }
-
-.homepage img {
-  max-width: 100%;
-  height: auto;
-}
-
-.homepage h1 {
-  font-size: 2.5em;
-  margin-top: 20px;
-}
-
 .homepage p {
-  margin-top: 20px;
-  line-height: 1.5;
+  font-size: 25px;
 }
-
-/* Style the portfolio section */
+.homepage img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
 .portfolio {
-  background-color: #fff;
-  padding: 50px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio h1 {
-  font-size: 2em;
   text-align: center;
-  margin-bottom: 30px;
+  padding: 20px;
 }
-
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 .card-portfolio {
-  text-align: center;
-  margin-bottom: 30px;
+  align-items: center;
+  padding: 75px;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-.card-portfolio img {
-  max-width: 100%;
-  height: auto;
-}
-
-.card-portfolio h3 {
-  font-size: 1.5em;
-  margin-top: 10px;
-}
-
-.card-portfolio p {
-  margin-top: 10px;
-}
-
-.card-portfolio button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .pagination {
   text-align: center;
   margin-top: 30px;
 }
-
 .page-link {
   display: inline-block;
   padding: 10px;
@@ -97,11 +53,24 @@ body {
   text-decoration: none;
   border-radius: 5px;
 }
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 600px) {
-  .homepage,
-  .portfolio {
-    padding: 20px;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+button:hover {
+  background-color: #0056b3;
 }
